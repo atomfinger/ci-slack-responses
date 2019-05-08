@@ -1,7 +1,5 @@
 #!/bin/bash
 declare -a messages=(
-    "test"
-    "test2"
-    "test3"
+    "There is nothing here yet."
 )
 echo ${messages[$RANDOM % ${#messages[@]} ]}
