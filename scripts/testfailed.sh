@@ -34,5 +34,8 @@ declare -a messages=(
     "It's a beautiful thing, the destruction of tests @channel"
     "We do not merely destroy our failed tests; we change them @channel"
     "Sanity is not statistical, but test pass rates are @channel"
+    "Help me, @channel. You're my only hope"
+    "@channel I find your lack of passing disturbing"
+    "Failed tests is the path to the dark side. Failed tests leads to anger; anger leads to hate; hate leads to suffering. I sense failed tests @channel"
 )
 echo ${messages[$RANDOM % ${#messages[@]}]}
