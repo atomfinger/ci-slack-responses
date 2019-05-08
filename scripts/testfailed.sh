@@ -37,5 +37,9 @@ declare -a messages=(
     "Help me, @channel. You're my only hope"
     "@channel I find your lack of passing disturbing"
     "Failed tests is the path to the dark side. Failed tests leads to anger; anger leads to hate; hate leads to suffering. I sense failed tests @channel"
+    "@channel We must keep our faith in the tests. The day we stop beliving that automatic testing can work is the day we loose it"
+    "I'm one with the test. The test is one with me. We're both failures @channel"
+    "100 assertions. 100 http calls. And 100 compilations. Do it every single day! @channel"
+    "Most men would rather deny a failing test than face it @channel"
 )
 echo ${messages[$RANDOM % ${#messages[@]}]}
