@@ -56,13 +56,34 @@ declare messages=(
     "Surrounded by madness, surrounded by hunger, surrounded by everything but passing tests, I knew passing tests was our only way out @channel"
     "Please @channel. This is supposed to be a happy occasion. Let's not bicker and argue over who failed what"
     "@channel first to fix the failing test will get real Hawaiian food served in an authentic medieval English dungeon atmosphere" 
+        "Howdy partner, looks like we got an awfully failed test here. Care to take a look @channel?",
+    "Fail, or fail not. There is no unstable @channel"
+    "@channel, I shrunk the tests!"
+    "Look, @channel, I can see you're really upset about this. I honestly think you ought to sit down and calmly, take a stress pill, and think things over"
+    "@channel, does it bother you, that I'm not completely human?"
+    "@channel the way I see it, if you're going to fail a test, why not do it with some style?"
+    "Jen-kins phone home, to a place where tests pass! @channel"
+    "I am groot @channel"
+    "Hope. It is the only thing stronger than fear. And I hope that @channel can fix these failed tests"
+    "All good tests deserve embellishment. If only these tests got some @channel"
+    "What are we holding onto, @channel? Because these tests are not it"
+    "Dead or alive, you're fixing these tests @channel!"
+    "Fear of death is illogical, but the fear of failed tests keeps me up @channel"
+    "I have a very bad feeling about these tests @channel"
+    "These are not the tests you're looking for @channel"
+    "I'm sorry, @channel. I'm afraid I can't pass those tests"
+    "It'll take more than a few broken tests to take me down @channel. It's only a flesh wound"
+    "You shall not pass @channel!"
+    "@channel, I AM your father. And I am very disappointed"
+    "Good. Bad. I'm the guy with the failed tests @channel"
+    "One does not simply pass tests @channel"
+    "Take your stinking paws off me, you damned dirty test! @channel"
+    "@channel Fix the test friend, and enter"
 )
 
 func() {
-    #Picking random message
     local message=${messages[$RANDOM % ${#messages[@]}]}
-    #In case @channel has been forgotten
-    if [[ $message != *"@channel"* ]]; then 
+    if [[ ${message} != *"@channel"* ]]; then 
         message="$message @channel"
     fi
     echo ${message} 
