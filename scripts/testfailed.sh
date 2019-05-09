@@ -1,5 +1,5 @@
 #!/bin/bash
-declare -a messages=(
+declare messages=(
     "Rule 1: The Doctor lies. This test does not @channel"
     "I am and always will be the optimist. The hoper of far-flung hopes and the dreamer of improbable dreams. Currently I dream that this test will pass @channel"
     "@channel, there’s always something to look at if you open your eyes! For example, I opened mine and a test failed"
@@ -9,9 +9,9 @@ declare -a messages=(
     "What we got here is failure to test @channel"
     "You can't handle the test! @channel"
     "Mama always said life was like a box of tests. You never know what you're gonna get. I got failed tests... @channel"
-    "I see failed tests @channel"
+    "I see dead tests @channel"
     "@channel, we have a problem"
-    "You've got to ask yourself one question: 'Do I feel that the tests passed?'. Well, do ya, punk?"
+    "@channel, you've got to ask yourself one question: 'Do I feel that the tests passed?'. Well, do ya, punk?"
     "Say hello to my little test @channel!"
     "@channel listen to them. Failing tests of the night. What music they make"
     "A failed test. Shaken, not stirred @channel"
@@ -51,5 +51,21 @@ declare -a messages=(
     "@channel, a test failed, and to quote Gandalf 'All our hopes now lie with some hobbits, somewhere in the wilderness.'"
     "A red sun rises, failed tests occurred this night @channel"
     "It is a strange fate that we, @channel, should suffer so much fear and doubt over so small a test. Such a little thing"
+    "Look, @channel, we need people to start developing abilities"
+    "@channel, testing is like horses — when you fall down, it's important that you get right back on again... so I hope someone has time to get back on again"
+    "Surrounded by madness, surrounded by hunger, surrounded by everything but passing tests, I knew passing tests was our only way out @channel"
+    "Please @channel. This is supposed to be a happy occasion. Let's not bicker and argue over who failed what"
+    "@channel first to fix the failing test will get real Hawaiian food served in an authentic medieval English dungeon atmosphere" 
 )
-echo ${messages[$RANDOM % ${#messages[@]}]}
+
+func() {
+    #Picking random message
+    local message=${messages[$RANDOM % ${#messages[@]}]}
+    #In case @channel has been forgotten
+    if [[ $message != *"@channel"* ]]; then 
+        message="$message @channel"
+    fi
+    echo ${message} 
+}
+
+func
